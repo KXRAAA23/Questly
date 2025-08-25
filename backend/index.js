@@ -20,7 +20,7 @@ const corsOptions = {
   credentials: true // only needed if you use cookies or auth headers
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Preflight requests
 app.options("*", cors(corsOptions));
