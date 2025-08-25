@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 // Routes
-const authRoutes = require("./routes/authRoutes"); // login/register
+const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const challengeRoutes = require("./routes/challengeRoutes");
 const leaderboardRoutes = require("./routes/leaderboardRoutes");
@@ -12,22 +12,20 @@ const leaderboardRoutes = require("./routes/leaderboardRoutes");
 const app = express();
 
 // ---------------------------
-// CORS configuration
-// ---------------------------
-const corsOptions = {
-  origin: "https://kxraaa23.github.io", // GitHub Pages origin (no double https://, no repo path)
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true // only needed if you use cookies or auth headers
-};
-
-app.use(cors());
-
-// Preflight requests
-app.options("*", cors(corsOptions));
-
-// ---------------------------
 // Middleware
 // ---------------------------
+
+// Enable CORS for your frontend only
+app.use(cors({
+  origin: "https://kxraaa23.github.io", // your GitHub Pages URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+// Handle preflight requests
+app.options("*", cors());
+
+// Body parser
 app.use(express.json());
 
 // ---------------------------
