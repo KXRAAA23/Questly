@@ -30,7 +30,6 @@ frontend/node_modules
 # ===========================
 # Build / production folders
 # ===========================
-frontend/build
 backend/dist
 backend/build
 
