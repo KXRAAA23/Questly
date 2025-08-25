@@ -14,7 +14,3 @@ Questly is a daily challenge platform to help users improve habits, communicatio
 3. Setup `.env` for MongoDB and JWT
 4. Run backend: `npm run dev`
 5. Run frontend: `npm start`
-
-## Screenshots
-![Dashboard](./screenshots/dashboard.png)
-![Leaderboard](./screenshots/leaderboard.png)
