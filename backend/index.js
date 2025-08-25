@@ -10,14 +10,14 @@ const leaderboardRoutes = require("./routes/leaderboardRoutes");
 
 const app = express();
 app.use(cors({
-  origin: "https://https://kxraaa23.github.io/Questly/",  // your frontend URL
+  origin: "https://kxraaa23.github.io/Questly/",  // your frontend URL
   methods: ["GET","POST","PUT","DELETE"],
   credentials: true // only if you send cookies/auth headers
 }));
 
 // handle preflight requests
 app.options("*", cors({
-  origin: "https://kxraaa23.github.io",
+  origin: "https://kxraaa23.github.io/Questly/",
   methods: ["GET","POST","PUT","DELETE"],
   credentials: true
 }));
